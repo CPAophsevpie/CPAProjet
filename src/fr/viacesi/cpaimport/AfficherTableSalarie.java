@@ -45,7 +45,7 @@ public class AfficherTableSalarie {
 
 
 		AfficherTableSalarie ats = new AfficherTableSalarie();
-		ConnectionMySQL connecteur = new ConnectionMySQL("127.0.0.1", "cpauser", "cpamdp");
+		ConnectionMySQL connecteur = new ConnectionMySQL("127.0.0.1", "cpauser", "");
 		try {
 			connecteur.connect();
 
