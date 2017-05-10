@@ -10,6 +10,18 @@ public class IdentifiantBDD {
 	private String login;
 	public static boolean IdConnexion = false;
 	
+//	public String login;
+//  public String mdp; 
+//    
+//  public IdentifiantBDD(){
+//  }
+//	
+//	public IdentifiantBDD (String login, String mdp){
+//		this.login = login;
+//		this.mdp = mdp;
+//	 }
+	
+	
 	
 	/**
 	 * Methode generique pour recuperer un champ de la BDD
