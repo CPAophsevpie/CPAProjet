@@ -1,6 +1,5 @@
 package fr.viacesi.cpaimport;
 
-
 public class Utilisateur {
 
     String nom;
