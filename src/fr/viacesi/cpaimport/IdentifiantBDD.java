@@ -39,7 +39,7 @@ public class IdentifiantBDD {
 	 * @return boolean de connexion
 	 * @throws SQLException
 	 */
-	private boolean verifIdBdd () throws SQLException {
+	public boolean verifIdBdd () throws SQLException {
 		
 		login = getLogin();
 		String mdp = getMdp();
