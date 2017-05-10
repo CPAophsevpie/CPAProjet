@@ -47,8 +47,9 @@ public class IdentifiantBDD {
 				+ " Login_Habilitation = '"+login+"'") == login && 
 				lectureChampBDD("MdP_Habilitation","SELECT Mdp_Habilitation FROM "
 						+ "salaries where Mdp_Habilitation = '"+mdp+"'") == mdp ){
+			IdConnexion = true;
 		}
-		return IdConnexion = true;
+		return IdConnexion;
 	}
 	
 	
@@ -60,7 +61,7 @@ public class IdentifiantBDD {
 			role = lectureChampBDD("Type_Role", "SELECT Type_Role FROM role inner join salaries sal "
 					+ "on id.salaries = id.role where Login_Habilitation = '"+login+"'");
 		}else{
-			System.out.println("Le login et ou le mot de passe est incorrect");
+			System.out.println("Le mot de passe est incorrect");
 		}
 		return role;
 	}
