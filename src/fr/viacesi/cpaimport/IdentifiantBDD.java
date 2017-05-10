@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class IdentifiantBDD {
 
-	String login;
+	private String login;
 	public static boolean IdConnexion = false;
 	
 	
@@ -39,7 +39,7 @@ public class IdentifiantBDD {
 	 * @return boolean de connexion
 	 * @throws SQLException
 	 */
-	public boolean verifIdBdd () throws SQLException {
+	private boolean verifIdBdd () throws SQLException {
 		
 		login = getLogin();
 		String mdp = getMdp();
@@ -84,7 +84,7 @@ public class IdentifiantBDD {
 	 * Demande du login
 	 * @return login
 	 */
-	public String getLogin(){
+	private String getLogin(){
 		Scanner in = new Scanner (System.in);
 		System.out.print("Veuillez entrer votre login : ");
 		String login = in.nextLine();
@@ -96,7 +96,7 @@ public class IdentifiantBDD {
 	 * Demande du mot de passe
 	 * @return mot de passe
 	 */
-	public String getMdp(){
+	private String getMdp(){
 		Scanner in = new Scanner (System.in);
 		System.out.print("Veuillez entrer votre mot de passe : ");
 		String mdp = in.nextLine();

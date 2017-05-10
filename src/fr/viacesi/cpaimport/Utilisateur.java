@@ -2,9 +2,9 @@ package fr.viacesi.cpaimport;
 
 public class Utilisateur {
 
-    String nom;
-    String prenom; 
-    String role;
+    public String nom;
+    public String prenom; 
+    public String role;
     public Utilisateur(){
     	
     }

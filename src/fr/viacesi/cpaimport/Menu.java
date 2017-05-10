@@ -33,7 +33,7 @@ public class Menu {
 	}
 	
 	
-	public void afficherMenu(){
+	private void afficherMenu(){
 		System.out.println("\nUTILITAIRE CPA");
 		System.out.println("1. Importer des données");
 		System.out.println("2. Exporter des données");
@@ -41,7 +41,7 @@ public class Menu {
 	}
 	
 	
-	public int getValeur(String message){
+	private int getValeur(String message){
 		System.out.print(message);
 		return scanner.nextInt();
 	}
