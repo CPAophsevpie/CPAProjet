@@ -11,12 +11,11 @@ import com.mysql.jdbc.Util;
 public class IdentifiantBDD {
 
 	String login;
-	static boolean IdConnexion = false;
-	
+	public static boolean IdConnexion = false;
 	
 	
 	/**
-	 * Methode générique pour récupérer un champ de la BDD
+	 * Methode generique pour recuperer un champ de la BDD
 	 * @param ChampBDD
 	 * @param Requete
 	 * @return valeur du ChampBDD
@@ -55,8 +54,10 @@ public class IdentifiantBDD {
 			return IdConnexion = true;
 		}
 		else{
-			System.out.println("L'identifiant et/ou le mot de passe est incorrect");
+			System.out.println("\n**L'identifiant et/ou le mot de passe est incorrect**\n");
+			verifIdBdd();
 			return IdConnexion;
+			
 		}
 	}
 	
@@ -71,13 +72,13 @@ public class IdentifiantBDD {
 
 		if (verifIdBdd()){
 			util.role = lectureChampBDD("r.Type_Role", "SELECT r.Type_Role from role r "
-					+ "inner join salaries s on s.ID_Salarie = r.ID_Role "
+					+ "inner join salaries s on s.ID_Role = r.ID_Role "
 					+ "where Login_Habilitation = '"+login+"'");
 			util.nom = lectureChampBDD("salaries.Nom_Salarie", "SELECT salaries.Nom_Salarie from salaries"
 					+ " where salaries.Login_Habilitation = '"+login+"'");
 			util.prenom = lectureChampBDD("salaries.Prenom_Salarie", "SELECT salaries.Prenom_Salarie from salaries"
 					+ " where salaries.Login_Habilitation = '"+login+"'");
-			System.out.println("Bonjour " + util.role + " " + util.prenom + " " + util.nom);
+			System.out.println("\n**Bonjour " + util.role + " " + util.prenom + " " + util.nom + "**");
 			}
 	}
 	
@@ -88,7 +89,7 @@ public class IdentifiantBDD {
 	 */
 	public String getLogin(){
 		Scanner in = new Scanner (System.in);
-		System.out.println("Veuillez entrer votre login : ");
+		System.out.print("Veuillez entrer votre login : ");
 		String login = in.nextLine();
 		return login;		
 	}
@@ -100,7 +101,7 @@ public class IdentifiantBDD {
 	 */
 	public String getMdp(){
 		Scanner in = new Scanner (System.in);
-		System.out.println("Veuillez entrer votre mot de passe : ");
+		System.out.print("Veuillez entrer votre mot de passe : ");
 		String mdp = in.nextLine();
 		return mdp;		
 	}

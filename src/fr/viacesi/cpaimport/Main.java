@@ -15,9 +15,13 @@ public class Main {
 		}
 	
 		IdentifiantBDD idbdd = new IdentifiantBDD();
+		Menu fct = new Menu();
 		
 		try {
 			idbdd.getUtilisateur();
+			fct.gererProgramme();
+			
+			System.out.println(IdentifiantBDD.IdConnexion);
 			
 		} catch (SQLException e) {
 			System.out.println("");
