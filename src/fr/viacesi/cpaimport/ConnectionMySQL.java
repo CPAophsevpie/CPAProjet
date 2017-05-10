@@ -37,7 +37,7 @@ public class ConnectionMySQL {
 
 	public void connect() throws SQLException{
 		//Connexion a la base de données
-		System.out.println("Connexion à la base de données");
+//		System.out.println("Connexion à la base de données");
 
 		String dBurl = "jdbc:mysql://"+host+"/autoconcept_v1";
 		connection = DriverManager.getConnection(dBurl, user, password);
@@ -51,7 +51,7 @@ public class ConnectionMySQL {
 
 	}
 	public ResultSet execute(String requete) throws SQLException{
-		System.out.println("creation et execution de la requête :"+requete);
+//		System.out.println("creation et execution de la requête :"+requete);
 		Statement stmt = connection.createStatement();
 		return stmt.executeQuery(requete);
 	}
