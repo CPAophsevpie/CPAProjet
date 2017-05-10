@@ -52,7 +52,7 @@ public class IdentifiantBDD {
 	}
 	
 	
-	public String getConnextionRole()throws SQLException{
+	public String getConnexionRole()throws SQLException{
 		
 		String role ="";
 		
@@ -64,7 +64,6 @@ public class IdentifiantBDD {
 		}
 		return role;
 	}
-	
 	
 	
 	public String getLogin(){
@@ -98,10 +97,12 @@ public class IdentifiantBDD {
 		try {
 			System.out.println(idbdd.verifIdBdd());
 
-//			System.out.println(idbdd.getConnextionRole());
+//			System.out.println(idbdd.getConnexionRole());
 			
 			
 		} catch (SQLException e) {
+			
+			System.out.println("");
 			System.err.println("ERREUR");
 			e.printStackTrace();
 		}
