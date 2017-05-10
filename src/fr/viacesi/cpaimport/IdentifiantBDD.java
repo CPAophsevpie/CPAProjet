@@ -1,11 +1,8 @@
 package fr.viacesi.cpaimport;
 
 import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.util.Scanner;
-
-import com.mysql.jdbc.Util;
 
 
 public class IdentifiantBDD {
